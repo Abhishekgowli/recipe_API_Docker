@@ -5,6 +5,6 @@ jobs:
 
     steps:
       run: 
-        pip install docker-compose
-      run:
+        -pip install docker-compose,
+
         - docker-compose run app sh -c "python manage.py wait_for_db && python manage.py test && flake8"
