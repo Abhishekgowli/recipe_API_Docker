@@ -1,9 +1,7 @@
 jobs:
   build:
     docker:
-
-services:
-  - docker
+     - image: alpine
 
 run: pip install docker-compose
 
