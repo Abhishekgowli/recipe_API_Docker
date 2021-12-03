@@ -1,7 +1,8 @@
 jobs:
   build:
     docker:
-     - image: alpine
+      - image: buildpack-deps:trusty
+
 
     run: pip install docker-compose
 
