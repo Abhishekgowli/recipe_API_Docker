@@ -2,7 +2,7 @@ version: 2
 jobs: # A basic unit of work in a run
   build: # runs not using Workflows must have a `build` job as entry point
     # directory where steps are ru
-    working_directory: ~
+    working_directory: /app
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
       - image: circleci/python:3.6.4
