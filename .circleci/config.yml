@@ -5,7 +5,7 @@ jobs: # A basic unit of work in a run
     working_directory: ~/app
     docker: # run the steps with Docker
       # CircleCI Python images available at: https://hub.docker.com/r/circleci/python/
-      - image: docker:17.05.0-ce-git
+      - image: circleci/python:3.6.4
       #- image: alpine:3.7
     steps:
       - checkout  # checkout source code to working directory
