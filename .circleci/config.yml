@@ -11,7 +11,8 @@ jobs: # A basic unit of work in a run
       - checkout  # checkout source code to working directory
       - run:
           command: |  # use pipenv to install dependencies
-            pip install docker-compose
+            apk add --no-cache py-pip=9.0.0-r1
+            pip install docker-compose==1.15.0
       - run:
           command: |
             docker-compose up -d
