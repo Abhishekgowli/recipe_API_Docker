@@ -11,10 +11,10 @@ jobs: # A basic unit of work in a run
       - checkout  # checkout source code to working directory
       - run:
           command: |  # use pipenv to install dependencies
-            pip install docker-compose==1.15.0
+            pip install docker-compose
       - run:
           command: |
-            docker-compose run app  python manage.py test && flake8
+            docker-compose run app sh -c "python manage.py test && flake8"
       
       
 
