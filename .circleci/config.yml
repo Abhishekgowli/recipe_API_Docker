@@ -14,8 +14,7 @@ jobs: # A basic unit of work in a run
             pip install docker-compose
       - run:
           command: |
-            sudo docker-compose up -d
-            sudo docker-compose run app sh -c "python3 manage.py test && flake8"
+            docker-compose run app sh -c "python3 manage.py test && flake8"
       
       
 
