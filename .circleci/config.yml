@@ -14,9 +14,7 @@ jobs: # A basic unit of work in a run
             pip install docker-compose
       - run:
           command: |
-            sudo gpasswd -a $USER docker-compose
-            newgrp docker-compose
-            docker-compose run app sh -c "python3 manage.py test && flake8"
+            docker-compose up app sh -c "python3 manage.py test && flake8"
       
       
 
