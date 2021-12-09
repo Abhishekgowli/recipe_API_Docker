@@ -14,7 +14,6 @@ jobs: # A basic unit of work in a run
             pip install docker-compose==1.15.0
       - run:
           command: |
-            docker-compose up -d
             docker-compose run app sh -c "python manage.py test && flake8"
       
       
