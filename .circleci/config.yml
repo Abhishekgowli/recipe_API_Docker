@@ -11,7 +11,7 @@ jobs: # A basic unit of work in a run
       - checkout  # checkout source code to working directory
       - run:
           command: |  # use pipenv to install dependencies
-            pip install docker-compose
+            apt-get install docker-compose
       - run:
           command: |
             docker-compose up app sh -c "python3 manage.py test && flake8"
